@@ -1,0 +1,35 @@
+;;; requirejs-autoloads.el --- automatically extracted autoloads
+;;
+;;; Code:
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+
+;;;### (autoloads nil "requirejs" "requirejs.el" (22484 17544 290997
+;;;;;;  727000))
+;;; Generated autoloads from requirejs.el
+
+(autoload 'requirejs-mode "requirejs" "\
+Minor mode for handling requirejs imports in a JavaScript file.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'requirejs-snippets-initialize "requirejs" "\
+Add this directory with '/snippets' to the `yas-snippets-dir' list.
+Compile and load the new snippets directory.
+
+\(fn)" nil nil)
+
+(eval-after-load 'yasnippet '(requirejs-snippets-initialize))
+
+;;;***
+
+;;;### (autoloads nil nil ("requirejs-pkg.el") (22484 17544 473671
+;;;;;;  357000))
+
+;;;***
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; no-update-autoloads: t
+;; End:
+;;; requirejs-autoloads.el ends here
