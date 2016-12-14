@@ -7,8 +7,6 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa-stable.milkbox.net/packages/"))
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
@@ -42,6 +40,10 @@
 (add-to-list 'company-backends 'company-ghc)
 (custom-set-variables '(company-ghc-show-info t))
 
+
+;; prerequisite: install org mode
+(setq org-startup-with-inline-images t)
+(add-hook 'org-mode-hook 'iimage-mode)
 
 (defun hi-jay ()
   (message "hello jay, .emacs parsed fully"))

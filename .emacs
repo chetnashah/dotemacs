@@ -22,6 +22,11 @@
 			     "opam config var share 2> /dev/null") 0 -1))
 (add-to-list 'load-path (concat opam-share
 				"/emacs/site-lisp"))
+
+;; make sure first to install ocp-indent and merlin using opam install
+(add-to-list 'load-path "/home/jayshah/.opam/system/share/emacs/site-lisp")
+(require 'ocp-indent)
+
 ;; Load merlin-mode
 (require 'merlin)
 ;; Start merlin on ocaml files
@@ -40,6 +45,10 @@
 (add-to-list 'company-backends 'company-ghc)
 (custom-set-variables '(company-ghc-show-info t))
 
+
+;; prerequisite: install org mode
+(setq org-startup-with-inline-images t)
+(add-hook 'org-mode-hook 'iimage-mode)
 
 (defun hi-jay ()
   (message "hello jay, .emacs parsed fully"))
